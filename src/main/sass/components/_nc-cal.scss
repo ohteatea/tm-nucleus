@@ -1,0 +1,54 @@
+.nc-cal {
+  display: flex;
+}
+
+.nc-cal__week {
+  display: block;
+  height: 40px;
+}
+
+.nc-cal__day {
+  @include nc-type-scale('milli');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 40px;
+  height: inherit;
+  margin: 2px 2px 0 0;
+  cursor: pointer;
+  background-color: $nc-brand-gray3;
+}
+
+.nc-cal__day:hover {
+  background-color: $nc-brand-primary-lighter50;
+}
+
+.nc-cal__day--empty {
+  background-color: transparent;
+}
+
+.nc-cal__day--selected {
+  background-color: $nc-brand-primary-lighter75;
+}
+
+.nc-cal__day--first-selected,
+.nc-cal__day--last-selected {
+  background-color: $nc-brand-primary;
+}
+
+.nc-cal__day--past-date {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.nc-cal__day-of-week {
+  @include nc-type-scale('milli');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 40px;
+  height: 20px;
+  margin: 0 2px 9px 0;
+}
